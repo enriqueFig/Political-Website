@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKE AMERICA GREAT AGAIN - U.S. Constitution</title>
+    <style>
+        /* ============================================
+           EASY EDIT SECTION - CHANGE YOUR INFO HERE
+           ============================================ */
+        
+        /* Your personal information - Edit these values */
+        :root {
+            --your-name: "Enrique Figueredo";
+            --your-age: "12";
+            --your-birthday: "November 1st, 2013";
+            --your-email: "YOUR_EMAIL@example.com"; /* CHANGE THIS */
+            --your-phone: "(555) 123-4567"; /* CHANGE THIS */
+            --your-image: "URL_TO_YOUR_IMAGE"; /* ADD YOUR IMAGE URL HERE */
+        }
+
+        /* ============================================
+           END OF EASY EDIT SECTION
+           ============================================ */
+
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Main body styling */
+        body {
+            font-family: 'Georgia', serif;
+            background: #1a2942;
+            color: #f0f0f0;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Header section styling */
+        .header {
+            background: linear-gradient(180deg, #c8102e 0%, #9a0c23 100%);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border-bottom: 4px solid #ffd700;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .trump-image {
+            width: 100px;
+            height: 125px;
+            border: 3px solid #ffd700;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            object-fit: cover;
+        }
+
+        .title-section {
+            flex: 1;
+            min-width: 280px;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            margin-bottom: 8px;
+            font-family: 'Arial Black', sans-serif;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: white;
+            margin-bottom: 8px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .slogan {
+            font-size: 0.95em;
+            color: #ffd700;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* About Me Section */
+        .about-section {
+            background: linear-gradient(135deg, #003f87 0%, #002561 100%);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            border: 3px solid #ffd700;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .about-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about-image {
+            width: 180px;
+            height: 220px;
+            border: 4px solid #ffd700;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-section h2 {
+            color: #ffd700;
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .about-section p {
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .about-section strong {
+            color: #ffd700;
+        }
+
+        .contact-info {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #ffd700;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+        }
+
+        /* Navigation buttons */
+        .nav-section {
+            background: linear-gradient(90deg, #003f87 0%, #c8102e 50%, #003f87 100%);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            border: 2px solid #ffd700;
+        }
+
+        .nav-section h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background: #ffd700;
+            color: #003f87;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-btn:hover {
+            background: #ffed4e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Content display area */
+        .content-box {
+            background: #2a3f5f;
+            padding: 35px;
+            border-radius: 12px;
+            border: 3px solid #003f87;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+            max-height: 600px;
+            overflow-y: auto;
+            line-height: 1.8;
+        }
+
+        .content-box h2 {
+            color: #ffd700;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .content-box h3 {
+            color: #a8d0ff;
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        .content-box p {
+            margin-bottom: 18px;
+            text-align: justify;
+            font-size: 1.05em;
+        }
+
+        .explanation-box {
+            background: rgba(255, 215, 0, 0.08);
+            padding: 20px;
+            border-left: 4px solid #ffd700;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .explanation-box h4 {
+            color: #ffd700;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* Scrollbar styling */
+        .content-box::-webkit-scrollbar {
+            width: 14px;
+        }
+
+        .content-box::-webkit-scrollbar-track {
+            background: #1a2942;
+            border-radius: 10px;
+        }
+
+        .content-box::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #c8102e 0%, #9a0c23 100%);
+            border-radius: 10px;
+            border: 2px solid #1a2942;
+        }
+
+        /* Footer section */
+        .footer {
+            background: linear-gradient(180deg, #003f87 0%, #002561 100%);
+            padding: 25px 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 4px solid #ffd700;
+        }
+
+        .footer p {
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 8px 0;
+        }
+
+        .creator-credit {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #ffd700;
+            color: #ffd700;
+            font-size: 1em;
+        }
+
+        /* Responsive design for mobile */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            .trump-image {
+                width: 70px;
+                height: 90px;
+            }
+            
+            .about-image {
+                width: 140px;
+                height: 170px;
+            }
+            
+            .content-box {
+                padding: 20px;
+                max-height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/440px-Donald_Trump_official_portrait.jpg" 
+                 alt="President Donald Trump" class="trump-image">
+            
+            <div class="title-section">
+                <h1>MAKE AMERICA GREAT AGAIN</h1>
+                <div class="subtitle">THE UNITED STATES CONSTITUTION</div>
+                <div class="slogan">AMERICA FIRST - KEEP AMERICA GREAT</div>
+            </div>
+            
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/440px-Donald_Trump_official_portrait.jpg" 
+                 alt="President Donald Trump" class="trump-image">
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- About Me Section -->
+        <section class="about-section">
+            <div class="about-content">
+                <!-- YOUR IMAGE GOES HERE - Replace the src with your image URL -->
+                <img src="https://via.placeholder.com/180x220/003f87/ffd700?text=Your+Photo+Here" 
+                     alt="Enrique Figueredo" class="about-image" id="creatorImage">
+                
+                <div class="about-text">
+                    <h2>About the Creator</h2>
+                    <p><strong>Name:</strong> Enrique Figueredo</p>
+                    <p><strong>Age:</strong> 12 years old</p>
+                    <p><strong>Birthday:</strong> November 1st, 2013</p>
+                    <p><strong>Political Affiliation:</strong> MAGA Republican</p>
+                    <p><strong>Passion:</strong> Politics and American Government</p>
+                    
+                    <p style="margin-top: 15px; font-size: 1.15em; font-style: italic;">
+                        "I am passionate about American politics and conservative values. I created this website to help people understand our Constitution and the principles that make America great. I am on track to one day serve this great nation in public office."
+                    </p>
+                    
+                    <!-- CONTACT INFORMATION - Edit your email and phone here -->
+                    <div class="contact-info">
+                        <h3 style="color: #ffd700; margin-bottom: 10px;">Contact Information</h3>
+                        <p><strong>Email:</strong> <span id="emailContact">your.email@example.com</span></p>
+                        <p><strong>Phone:</strong> <span id="phoneContact">(555) 123-4567</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Section -->
+        <section class="nav-section">
+            <h3>SELECT A SECTION TO LEARN ABOUT THE CONSTITUTION</h3>
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showSection('preamble')">Preamble</button>
+                <button class="nav-btn" onclick="showSection('article1')">Article I</button>
+                <button class="nav-btn" onclick="showSection('article2')">Article II</button>
+                <button class="nav-btn" onclick="showSection('article3')">Article III</button>
+                <button class="nav-btn" onclick="showSection('first')">1st Amendment</button>
+                <button class="nav-btn" onclick="showSection('second')">2nd Amendment</button>
+                <button class="nav-btn" onclick="showSection('fourth')">4th Amendment</button>
+                <button class="nav-btn" onclick="showSection('fifth')">5th Amendment</button>
+                <button class="nav-btn" onclick="showSection('tenth')">10th Amendment</button>
+            </div>
+        </section>
+
+        <!-- Content Display Area -->
+        <div class="content-box" id="contentArea">
+            <h2>Welcome to the Constitution Educational Center</h2>
+            <p>Click any section button above to learn about different parts of the U.S. Constitution with detailed explanations in plain English.</p>
+            <p>This website was created by Enrique Figueredo to help Americans understand their constitutional rights and the foundation of our government.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>DEFEND THE CONSTITUTION | SUPPORT OUR PRESIDENT | GOD BLESS AMERICA</p>
+        <div class="creator-credit">
+            <p>Website Created by Enrique Figueredo</p>
+            <p>Future Leader of America | MAGA Republican | Age 12</p>
+        </div>
+    </footer>
+
+    <script>
+        /* ============================================
+           EASY EDIT SECTION - CHANGE YOUR INFO HERE
+           ============================================ */
+        
+        // YOUR PERSONAL INFORMATION - Edit these values
+        const yourName = "Enrique Figueredo";
+        const yourAge = "12";
+        const yourBirthday = "November 1st, 2013";
+        const yourEmail = "your.email@example.com";  // CHANGE THIS
+        const yourPhone = "(555) 123-4567";  // CHANGE THIS
+        const yourImageURL = "https://via.placeholder.com/180x220/003f87/ffd700?text=Your+Photo+Here";  // CHANGE THIS
+        
+        /* ============================================
+           END OF EASY EDIT SECTION
+           ============================================ */
+
+        // Update contact information on page load
+        document.getElementById('emailContact').textContent = yourEmail;
+        document.getElementById('phoneContact').textContent = yourPhone;
+        document.getElementById('creatorImage').src = yourImageURL;
+
+        // Constitution content with explanations
+        const constitutionContent = {
+            preamble: {
+                title: "The Preamble",
+                text: "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.",
+                explanation: "EXPLANATION: The Preamble is the introduction to the Constitution. It establishes that the Constitution's authority comes from the people themselves, not from the government. It outlines six key purposes: creating a stronger union of states, ensuring fair treatment under law, maintaining peace within the nation, protecting against foreign threats, promoting citizen wellbeing, and preserving freedom for future generations. This sets the foundation that government power comes from the consent of the governed."
+            },
+            article1: {
+                title: "Article I - The Legislative Branch",
+                text: "Section 1: All legislative Powers herein granted shall be vested in a Congress of the United States, which shall consist of a Senate and House of Representatives.\n\nThe House of Representatives shall be composed of Members chosen every second Year by the People. Representatives must be at least 25 years old and citizens for 7 years.\n\nThe Senate shall be composed of two Senators from each State. Senators must be at least 30 years old and citizens for 9 years.",
+                explanation: "EXPLANATION: Article I creates Congress, the lawmaking branch of government. It has two chambers: the House of Representatives and the Senate. The House represents the people directly, with seats based on state population and members serving 2-year terms. The Senate represents states equally, with 2 senators per state serving 6-year terms. This structure balances the interests of large and small states. Congress has the power to make laws, declare war, regulate commerce, levy taxes, and control federal spending. This is the largest article because the Founders wanted Congress to be the most powerful branch."
+            },
+            article2: {
+                title: "Article II - The Executive Branch",
+                text: "Section 1: The executive Power shall be vested in a President of the United States of America. He shall hold his Office during the Term of four Years.\n\nBefore entering office, the President must take this oath: 'I do solemnly swear that I will faithfully execute the Office of President of the United States, and will to the best of my Ability, preserve, protect and defend the Constitution of the United States.'\n\nSection 2: The President shall be Commander in Chief of the Army and Navy of the United States.",
+                explanation: "EXPLANATION: Article II establishes the Presidency and executive branch. The President serves as the nation's chief executive and military commander. The President enforces laws passed by Congress, manages foreign policy, appoints federal judges and cabinet members (with Senate approval), and can veto legislation. The President serves 4-year terms and must take an oath to defend the Constitution. This creates a single executive to ensure decisive leadership while limiting power through checks and balances with Congress and the courts. The President cannot make laws but must faithfully execute them."
+            },
+            article3: {
+                title: "Article III - The Judicial Branch",
+                text: "Section 1: The judicial Power of the United States, shall be vested in one supreme Court, and in such inferior Courts as the Congress may from time to time ordain and establish. The Judges shall hold their Offices during good Behaviour.\n\nSection 2: The judicial Power shall extend to all Cases, in Law and Equity, arising under this Constitution, the Laws of the United States, and Treaties made.",
+                explanation: "EXPLANATION: Article III creates the federal court system, headed by the Supreme Court. Federal judges serve lifetime appointments (during good behavior) to protect them from political pressure and ensure independent judgment. The courts have the power of judicial review, meaning they can declare laws unconstitutional. Federal courts handle cases involving federal law, disputes between states, and cases involving foreign diplomats. This ensures that laws are interpreted consistently and that government actions remain within constitutional bounds. The Supreme Court is the final authority on what the Constitution means."
+            },
+            first: {
+                title: "First Amendment - Fundamental Freedoms",
+                text: "Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.",
+                explanation: "EXPLANATION: The First Amendment protects five fundamental freedoms that are essential to democracy. First, it prevents government from establishing an official religion or interfering with religious practice - you can worship as you choose or not at all. Second, it protects freedom of speech, allowing citizens to express opinions without government censorship. Third, it protects freedom of the press, ensuring media can report news without government control. Fourth, it protects the right to peaceful assembly and protest. Fifth, it protects the right to petition government for change. These rights are the foundation of American liberty and cannot be taken away."
+            },
+            second: {
+                title: "Second Amendment - Right to Bear Arms",
+                text: "A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.",
+                explanation: "EXPLANATION: The Second Amendment protects the individual right to own and carry firearms. The Founders believed an armed citizenry was essential to defending against tyranny and protecting personal security. While the amendment mentions militias (citizen soldiers), the Supreme Court has ruled this protects an individual right to gun ownership for lawful purposes like self-defense. This right can be reasonably regulated but not eliminated. It reflects the principle that free people have the right to defend themselves, their families, and their nation. This is one of the most important rights protecting American freedom."
+            },
+            fourth: {
+                title: "Fourth Amendment - Protection from Unreasonable Searches",
+                text: "The right of the people to be secure in their persons, houses, papers, and effects, against unreasonable searches and seizures, shall not be violated, and no Warrants shall issue, but upon probable cause, supported by Oath or affirmation, and particularly describing the place to be searched, and the persons or things to be seized.",
+                explanation: "EXPLANATION: The Fourth Amendment protects your privacy and property from government intrusion. Police and government agents cannot search your home, person, or belongings without a warrant based on probable cause (reasonable evidence of criminal activity). Warrants must specifically describe what will be searched and what they are looking for - no general searches allowed. Evidence obtained through illegal searches typically cannot be used in court. This prevents government overreach and arbitrary harassment. Your home is your castle, and the government needs a very good reason approved by a judge before they can enter."
+            },
+            fifth: {
+                title: "Fifth Amendment - Due Process and Rights of the Accused",
+                text: "No person shall be held to answer for a capital, or otherwise infamous crime, unless on a presentment or indictment of a Grand Jury; nor shall any person be subject for the same offence to be twice put in jeopardy of life or limb; nor shall be compelled in any criminal case to be a witness against himself, nor be deprived of life, liberty, or property, without due process of law.",
+                explanation: "EXPLANATION: The Fifth Amendment provides multiple crucial protections. First, serious federal crimes require grand jury indictment before trial. Second, double jeopardy protection means you cannot be tried twice for the same crime - if found not guilty, you're free forever. Third, you have the right to remain silent and cannot be forced to testify against yourself (this is where 'pleading the Fifth' comes from). Fourth, due process means government must follow fair procedures before punishing you or taking your property. These protections ensure fair treatment in the legal system and prevent government abuse of power."
+            },
+            tenth: {
+                title: "Tenth Amendment - Powers Reserved to States and People",
+                text: "The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people.",
+                explanation: "EXPLANATION: The Tenth Amendment is crucial for limiting federal power and protecting states' rights. It confirms that the federal government only has powers specifically granted by the Constitution. All other governmental powers belong to the states or the people. This includes most criminal law, education policy, marriage laws, and local governance. The amendment protects state sovereignty and prevents federal overreach. It reflects the principle that government closest to the people governs best, and that power should be spread out rather than concentrated in Washington D.C. This is a key protection of American federalism and individual liberty."
+            }
+        };
+
+        // Function to display selected section
+        function showSection(section) {
+            const content = constitutionContent[section];
+            const contentArea = document.getElementById('contentArea');
+            
+            contentArea.innerHTML = `
+                <h2>${content.title}</h2>
+                <h3>Original Text:</h3>
+                <p style="font-style: italic; background: rgba(255,215,0,0.05); padding: 15px; border-left: 4px solid #ffd700; border-radius: 5px;">${content.text.replace(/\n\n/g, '</p><p style="font-style: italic; background: rgba(255,215,0,0.05); padding: 15px; border-left: 4px solid #ffd700; border-radius: 5px; margin-top: 10px;">')}</p>
+                <div class="explanation-box">
+                    <h4>Plain English Explanation:</h4>
+                    <p>${content.explanation}</p>
+                </div>
+            `;
+            
+            // Scroll to top of content
+            contentArea.scrollTop = 0;
+        }
+
+        // Show preamble by default
+        showSection('preamble');
+    </script>
+</body>
+</html>
